@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:ignore="MergeRootFrame"
+    android:layout_height="match_parent"
+    tools:context=".HomeCardActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/fampay_headline"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="21dp">
+
+
+        <TextView
+            android:id="@+id/fampay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:text="@string/fampay"
+            android:textAppearance="@style/fampay" />
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:src="@drawable/fampay_icon" />
+    </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/swipe_refresh_layout"
+
+        android:layout_below="@id/fampay_headline"
+        android:layout_height="wrap_content">
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="24dp"
+android:paddingBottom="20dp"
+        android:background="@drawable/rectangle"
+        android:paddingHorizontal="20dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/image_card_HC5"
+                android:layout_width="match_parent"
+                android:layout_height="146dp"
+                android:layout_below="@id/small_background"
+                android:scaleType="fitXY" />
+
+            <RelativeLayout
+                android:id="@+id/small_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mask"
+                android:layout_marginVertical="15dp"
+                android:background="@drawable/rectangle_c"
+                android:paddingHorizontal="20dp">
+
+                <ImageView
+                    android:id="@+id/contact_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/arrow_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrow" />
+
+                <TextView
+                    android:id="@+id/small_card_description"
+                    android:layout_width="wrap_content"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@+id/contact_icon"
+
+                    android:text=""
+                    android:textAppearance="@style/small_card_" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mask"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:padding="28dp">
+
+                <Button
+                    android:id="@+id/action_button"
+                    android:layout_width="128dp"
+                    android:layout_height="42dp"
+                    android:layout_below="@id/card_description"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/action_button"
+                    android:text=""
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/with_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/big_display"
+                    android:gravity="top"
+                    android:text=""
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/card_description"
+                    android:layout_width="251dp"
+                    android:layout_height="36dp"
+                    android:layout_below="@id/with_action"
+                    android:layout_marginTop="25dp"
+                    android:gravity="top"
+                    android:lineSpacingExtra="4sp"
+                    android:text=""
+                    android:translationY="-1.97sp" />
+
+                <TextView
+                    android:id="@+id/big_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="90dp"
+                    android:gravity="top"
+                    android:text=""
+                    android:textColor="#FBAF03"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/center_cardview_HC4"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:layout_below="@+id/image_card_HC5"
+                android:layout_marginVertical="15dp"
+                >
+
+                <ImageView
+                    android:id="@+id/user_photo_HC4"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="11dp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/card_name_HC4"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/action1_HC4"
+                        android:layout_width="135dp"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/action1_button"
+                        android:text=""
+                        android:textColor="#FFF"
+
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/action2_HC4"
+                        android:layout_width="135dp"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_toEndOf="@id/action1_HC4"
+                        android:background="@drawable/action2_button"
+                        android:text=""
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/card_name_HC4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@+id/user_name_HC4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Center card"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/user_name_HC4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/user_photo_HC4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Arya Stark"
+                    android:textColor="#1B1B1E"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/scrollable_card_HC1"
+                android:layout_below="@+id/center_cardview_HC4"
+                android:background="@drawable/small_card_hc1"
+                android:paddingHorizontal="20dp">
+
+                <ImageView
+                    android:id="@+id/user_photo_HC1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:adjustViewBounds="true" />
+
+                <TextView
+                    android:id="@+id/small_card_description_HC1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/user_photo_HC1"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/user_name_HC1"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/small_card_description_HC1"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toEndOf="@id/user_photo_HC1"
+                    android:text=""
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/scrollable_card_HC1b"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/scrollable_card_HC1"
+                android:background="@drawable/small_card_hc1b"
+                android:paddingHorizontal="20dp">
+
+                <ImageView
+                    android:id="@+id/user_photo_HC1b"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:adjustViewBounds="true" />
+
+                <TextView
+                    android:id="@+id/small_card_description_HC1b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/user_photo_HC1b"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/user_name_HC1b"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/small_card_description_HC1b"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toEndOf="@id/user_photo_HC1b"
+                    android:text=""
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

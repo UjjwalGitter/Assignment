@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">fampay</string>
+    <string name="fampay">fampay</string>
+    <string name="big_display">
+
+Big display card
+</string>
+    <string name="with_action">with action</string>
+    <string name="action">Action</string>
+    <string name="this_is_a_s">
+
+This is a sample text for the subtitle that you can add to contextual cards
+</string>
+    <string name="small_card_">
+
+Small card with arrow
+</string>
+
+</resources>
